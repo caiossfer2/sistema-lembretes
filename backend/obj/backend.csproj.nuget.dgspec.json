@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/caiossfer/C#/teste-pratico-dit/backend/backend.csproj": {}
+    "/home/caiossfer/CSharp/teste-pratico-dit/backend/backend.csproj": {}
   },
   "projects": {
-    "/home/caiossfer/C#/teste-pratico-dit/backend/backend.csproj": {
+    "/home/caiossfer/CSharp/teste-pratico-dit/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/caiossfer/C#/teste-pratico-dit/backend/backend.csproj",
+        "projectUniqueName": "/home/caiossfer/CSharp/teste-pratico-dit/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "/home/caiossfer/C#/teste-pratico-dit/backend/backend.csproj",
+        "projectPath": "/home/caiossfer/CSharp/teste-pratico-dit/backend/backend.csproj",
         "packagesPath": "/home/caiossfer/.nuget/packages/",
-        "outputPath": "/home/caiossfer/C#/teste-pratico-dit/backend/obj/",
+        "outputPath": "/home/caiossfer/CSharp/teste-pratico-dit/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/caiossfer/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.10, )"

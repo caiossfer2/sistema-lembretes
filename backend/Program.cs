@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+
 var connetionString = builder.Configuration.GetConnectionString("Database");
 builder.Services.AddDbContext<Context>(
     options => options.UseMySql(connetionString, ServerVersion.AutoDetect(connetionString))
@@ -18,6 +19,12 @@ builder.Services.AddDbContext<Context>(
 
 
 var app = builder.Build();
+
+app.UseCors(builder => builder
+       .AllowAnyHeader()
+       .AllowAnyMethod()
+       .AllowAnyOrigin()
+    );
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
