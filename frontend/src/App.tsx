@@ -34,16 +34,20 @@ function App() {
       var today = new Date();
       today.setHours(0, 0, 0, 0);
       const formattedDate = formatDateToISO(reminderDate)
-      if(formattedDate >= today && !isNaN(+formattedDate)){
-        try {
-          await reminderController.create({name: reminderName, date: formattedDate});
-          getReminders()
-          setMessage({text: "Lembrete cadastrado", type: "success"})
-        } catch (error) {
-          setMessage({text: "Erro ao cadastrar lembrete", type: "error"})
+      if(!isNaN(+formattedDate)){
+        if(formattedDate >= today){
+          try {
+            await reminderController.create({name: reminderName, date: formattedDate});
+            getReminders()
+            setMessage({text: "Lembrete cadastrado", type: "success"})
+          } catch (error) {
+            setMessage({text: "Erro ao cadastrar lembrete", type: "error"})
+          }
+        }else{
+          setMessage({text: "A data deve ser hoje ou futuro", type: "error"})
         }
       }else{
-        setMessage({text: "A data deve ser válida e no mínimo para hoje", type: "error"})
+        setMessage({text: "A data deve seguir o formato informado", type: "error"})
       }
     }else{
       setMessage({text: "Preencha todos os campos", type: "error"})
