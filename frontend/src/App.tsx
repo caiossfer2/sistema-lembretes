@@ -65,6 +65,15 @@ function App() {
     const reminderController = new ReminderController();
     try {
       const data = await reminderController.getRemindersListing();
+      data.sort(function compare(a, b) {
+        if (a.date < b.date){
+          return -1;
+        }
+        if (a.date > b.date){
+          return 1;
+        }
+        return 0;
+      })
       setRemindersList(data);
     } catch (error) {
       setMessage({text: "Erro ao recuperar lembretes", type: "error"})
