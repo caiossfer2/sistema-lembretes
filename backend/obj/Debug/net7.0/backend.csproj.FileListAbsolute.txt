@@ -84,9 +84,3 @@
 /home/caiossfer/CSharp/teste-pratico-dit/backend/obj/Debug/net7.0/backend.pdb
 /home/caiossfer/CSharp/teste-pratico-dit/backend/obj/Debug/net7.0/backend.genruntimeconfig.cache
 /home/caiossfer/CSharp/teste-pratico-dit/backend/obj/Debug/net7.0/ref/backend.dll
-/home/caiossfer/CSharp/teste-pratico-dit/backend/bin/Debug/net7.0/System.Web.Cors.dll
-/home/caiossfer/CSharp/teste-pratico-dit/backend/bin/Debug/net7.0/System.Net.Http.Formatting.dll
-/home/caiossfer/CSharp/teste-pratico-dit/backend/bin/Debug/net7.0/System.Web.Http.dll
-/home/caiossfer/CSharp/teste-pratico-dit/backend/bin/Debug/net7.0/System.Web.Http.Cors.dll
-/home/caiossfer/CSharp/teste-pratico-dit/backend/bin/Debug/net7.0/Newtonsoft.Json.dll
-/home/caiossfer/CSharp/teste-pratico-dit/backend/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
