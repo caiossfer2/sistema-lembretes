@@ -95,7 +95,7 @@ function App() {
         <FormWrapper>
           <Title>Novo lembrete</Title>
           <TextField value={reminderName} setValue={setReminderName} label='Nome' placeholder='Nome do lembrete'/>
-          <TextField value={reminderDate} setValue={setReminderDate} label='Data' placeholder='Data do lembrete (no formato dd/mm/yy)'/>
+          <TextField value={reminderDate} setValue={setReminderDate} label='Data' placeholder='Data do lembrete (no formato dd/mm/yyyy)'/>
           {message && <ResultMessage  text={message.text} type={message.type}/>}
           <Button onClick={handleSubmit}>Criar</Button>
         </FormWrapper>
