@@ -56,7 +56,7 @@ function App() {
       await reminderController.delete(id);
       getReminders()
     } catch (error) {
-      
+      setMessage({text: "Erro ao remover lembrete", type: "error"})
     }
 
   }
@@ -67,7 +67,7 @@ function App() {
       const data = await reminderController.getRemindersListing();
       setRemindersList(data);
     } catch (error) {
-      
+      setMessage({text: "Erro ao recuperar lembretes", type: "error"})
     }
   }
 
