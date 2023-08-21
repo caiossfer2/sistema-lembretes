@@ -5,6 +5,7 @@
 - Será necessário converter a data digitada para o formato yyyy-mm-dd para a comparação entre datas, e também converter a data retornada do backend para o formato utilizado no Brasil;
 
 ### Decisões de projeto
+ - Utilização do Typescript
  - Escolha do banco de dados MySql por já ter familiaridade com seu uso;
  - Utilização da biblioteca styled-components;
  - Divisão do frontend nas pastas *controllers*, *services*, *components* e *types*;
