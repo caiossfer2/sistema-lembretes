@@ -14,7 +14,7 @@ namespace backend.Data
 
         }   
 
-        public DbSet<ReminderModel>? Reminders {get;set;}
+        public DbSet<ReminderModel> Reminders {get;set;}
 
           protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
