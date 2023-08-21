@@ -12,6 +12,7 @@ import { ReminderController } from './controllers/reminderController';
 import { ReminderDate } from './components/ReminderDate/styles';
 import { IMessage } from './types/IMessage';
 import ResultMessage from './components/ResultMessage';
+import { formatDateToISO } from './utils';
 
 function App() {
 
@@ -19,14 +20,6 @@ function App() {
   const [reminderDate, setReminderDate] = useState<string>();
   const [remindersList, setRemindersList] = useState<IReminderListingItem[]>();
   const [message, setMessage] = useState<IMessage>()
-
-  function formatDateToISO(dateString: string) {
-    let dateArr = dateString.split('/');
-    const day = dateArr[0];
-    dateArr[0] = dateArr[1]
-    dateArr[1] = day;
-    return new Date(dateArr.join())
-  }
 
   const handleSubmit = async () =>{
     if((reminderName && reminderDate) && reminderName.length > 0 && reminderDate.length > 0){
@@ -69,15 +62,6 @@ function App() {
     const reminderController = new ReminderController();
     try {
       const data = await reminderController.getRemindersListing();
-      data.sort(function compare(a, b) {
-        if (a.date < b.date){
-          return -1;
-        }
-        if (a.date > b.date){
-          return 1;
-        }
-        return 0;
-      })
       setRemindersList(data);
     } catch (error) {
       setMessage({text: "Erro ao recuperar lembretes", type: "error"})
