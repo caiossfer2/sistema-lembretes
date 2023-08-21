@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { P, Wrapper } from './styles'
 import { Icon } from '@iconify/react';
+import React from 'react';
 
 interface ReminderTextProps{
   children: ReactNode;

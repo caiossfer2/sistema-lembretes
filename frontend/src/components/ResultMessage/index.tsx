@@ -1,3 +1,4 @@
+import React from 'react'
 import { IMessage } from '../../types/IMessage'
 import { GreenText, RedText } from './styles'
 

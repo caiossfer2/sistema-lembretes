@@ -26,7 +26,7 @@ function App() {
     dateArr[0] = dateArr[1]
     dateArr[1] = day;
     return new Date(dateArr.join())
-}
+  }
 
   const handleSubmit = async () =>{
     if((reminderName && reminderDate) && reminderName.length > 0 && reminderDate.length > 0){
