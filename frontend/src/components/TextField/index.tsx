@@ -14,7 +14,7 @@ function TextField({label, placeholder, setValue, value}: TextFieldProps) {
       <LabelBox>
         <Label>{label}</Label>
       </LabelBox> 
-      <Input type='text' placeholder={placeholder} value={value} onChange={e => setValue(e.target.value)} />
+      <Input type='text' placeholder={placeholder} value={value ?? ''} onChange={e => setValue(e.target.value)} />
     </Wrapper>
   )
 }
