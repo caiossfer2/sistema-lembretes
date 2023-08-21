@@ -22,7 +22,7 @@ tenha seus dados de login:
 ```
 server=localhost;user=SEU_USUARIO;password=SUA_SENHA;database=DB_TESTE_PRATICO
 ```
-Depois, rode o comando para criar o banco de dados
+Depois, no diretório *backend*, rode o comando para criar o banco de dados
 ```
 dotnet ef database update DB
 ```
